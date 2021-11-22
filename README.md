@@ -1,5 +1,5 @@
 # Laravel Inertia Starter
-Laravel Modern App starter without building an API using `Laravel`, `Vue` and `Inertia`
+Laravel Modern SPA starter without building an API using `Laravel`, `Vue` and `Inertia`
 
 
 ## Contributing
