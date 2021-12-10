@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid</title>
+    <style>
+        body {
+            margin-top: 40px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 150px 100px auto;
+            grid-template-rows: 100px auto 100px;
+            grid-template-areas: "header header header" "nav aside main" "footer footer footer";
+            grid-gap: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background: red;
+        }
+
+        nav {
+            grid-area: nav;
+            background: orange;
+        }
+
+        main {
+            grid-area: main;
+            background: forestgreen;
+        }
+        aside {
+            grid-area: aside;
+            background: darkcyan;
+        }
+        footer {
+            grid-area: footer;
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+<section id="container">
+    <header>header area</header>
+    <nav>navigation area</nav>
+    <main>main area</main>
+    <aside>aside area</aside>
+    <footer>footer area</footer>
+
+</section>
+</body>
+</html>

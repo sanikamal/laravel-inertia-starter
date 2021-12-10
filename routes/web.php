@@ -17,7 +17,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
 //    return inertia('Welcome');
     return Inertia::render('Home', [
-        'name' => 'Sani Kamal',
+        'username' => 'Sani Kamal',
         'frameworks' => [
             'Laravel', 'Vue', 'Inertia'
         ]
@@ -25,10 +25,17 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    return Inertia::render('Users');
+    return Inertia::render('Users', [
+        'time'=>now()->toTimeString(),
+    ]);
 });
 
 Route::get('/settings', function () {
     sleep(3);
     return Inertia::render('Settings');
+});
+
+Route::post('/logout', function () {
+//    dd('logging the user out');
+    dd(request('foo'));
 });
